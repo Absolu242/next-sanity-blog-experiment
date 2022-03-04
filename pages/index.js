@@ -1,13 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
+
 import { useState } from "react";
-import Card from "../components/card";
 import PostCard from "../components/postcard";
-import { getAllPosts, getAllPostsForHome } from "../lib/api";
-import styles from "../styles/Home.module.css";
+import { getAllPosts } from "../lib/api";
 
 export default function Home({ posts = [] }) {
-  console.log(posts);
+ 
   const [qty, setQty] = useState(2);
 
   const [filtered, setFilter] = useState("");
